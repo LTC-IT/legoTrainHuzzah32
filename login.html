@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arduino Authentication page Example</title>
+    <script>
+        function checkPin() {
+            var username, password;
+            username = document.getElementById("username").value;
+            password = document.getElementById("password").value;
+            if (username == "1234" && password == "1234") {
+                new_html = "<a href='functionality.html'>Click here to continue</a>";
+            } else {
+                new_html = "Incorrect Pin <p>ERROR</p>";
+            }
+            document.getElementById("feedback").innerHTML = new_html;
+        }
+    </script>
+    <link rel="stylesheet" href="mysite.css">
+</head>
+
+<body>
+    <table width="100%">
+        <tr>
+            <td><a href="index.html">Home</a></td>
+            <td><a href="login.html">Login</a></td>
+        </tr>
+    </table>
+
+    <h1>Heading - Welcome!</h1>
+    <p>Introductory Text</p>
+    <h2>Please enter the pin to access the top secret THING</h2>
+    <input id="username">
+    <input id="password">
+    <button type="button" onclick="checkPin()">Submit</button>
+    <p id="feedback">---</p>
+    
+</body>
+
+</html>
